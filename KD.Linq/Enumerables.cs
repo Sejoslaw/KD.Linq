@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace KD.Linq
 {
@@ -12,6 +13,7 @@ namespace KD.Linq
         /// </summary>
         public static IEnumerable<TValue> ReplaceAt<TValue>(this IEnumerable<TValue> source, int index, TValue newValue)
         {
+            if (index < 0 || index > int.MaxValue) throw new IndexOutOfRangeException($"Wrong index value ({ index })");
             return new ReplaceAtIterator<TValue>(source, index, newValue);
         }
     }
