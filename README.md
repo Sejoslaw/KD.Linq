@@ -7,8 +7,8 @@ Added LINQ methods
 
 Replace At:
 ```csharp
-IEnumerable<int> list = new List<int>() { 1, 2, 3, 4 };
-list.ToList().ForEach(model => Console.Write(model + ", "));
+var list = new List<int>() { 1, 2, 3, 4 };
+list.ForEach(model => Console.Write(model + ", "));
 
 Console.WriteLine();
 
