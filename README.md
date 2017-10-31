@@ -43,3 +43,19 @@ var list3 = list2.ReplaceMultiple(8, value => value == 2).ToList();
 list3.ForEach(value => Console.Write(value + ", "));
 ```
 ![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/ReplaceMultiple.PNG)
+
+
+
+For Each (generic):
+```csharp
+List<int> list = new List<int>() { 1, 2, 1, 3, 1, 4 };
+// Standard ForEach which is include in List class
+list.ForEach(value => Console.Write(value + ", "));
+
+Console.WriteLine();
+
+IEnumerable<int> enumerable = new int[] { 1, 2, 1, 3, 1, 4 };
+// Generic ForEach made for any Enumerable
+enumerable.ForEach(value => Console.Write(value + ", ")).ToList();
+```
+![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/ForEach.PNG)
