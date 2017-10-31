@@ -1,7 +1,5 @@
-﻿using KD.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Test_ForEach
 {
@@ -11,13 +9,11 @@ namespace Test_ForEach
         {
             List<int> list = new List<int>() { 1, 2, 1, 3, 1, 4 };
             // Standard ForEach which is include in List class
-            list.ForEach(value => Console.Write(value + ", "));
-
-            Console.WriteLine();
+            Console.WriteLine(string.Join(", ", list));
 
             IEnumerable<int> enumerable = new int[] { 1, 2, 1, 3, 1, 4 };
             // Generic ForEach made for any Enumerable
-            enumerable.ForEach(value => Console.Write(value + ", ")).ToList();
+            Console.WriteLine(string.Join(", ", enumerable));
 
             Console.ReadKey();
         }

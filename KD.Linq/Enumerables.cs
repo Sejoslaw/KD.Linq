@@ -10,6 +10,22 @@ namespace KD.Linq
     public static class Enumerables
     {
         /// <summary>
+        /// Returns all occurrence of specified element in current Enumerable.
+        /// </summary>
+        public static IEnumerable<TValue> Find<TValue>(this IEnumerable<TValue> source, TValue lookingFor)
+        {
+            var list = new List<TValue>();
+            foreach (var value in source)
+            {
+                if (value.Equals(lookingFor))
+                {
+                    list.Add(value);
+                }
+            }
+            return list;
+        }
+
+        /// <summary>
         /// Generic version of "ForEach" method.
         /// Made separate from <see cref="List{T}"/>.
         /// </summary>
@@ -20,7 +36,7 @@ namespace KD.Linq
         }
 
         /// <summary>
-        /// Returns the index number of specified element.
+        /// Returns the index number of specified element; if not found, will return -1 instead.
         /// </summary>
         public static int IndexOf<TValue>(this IEnumerable<TValue> source, TValue value)
         {

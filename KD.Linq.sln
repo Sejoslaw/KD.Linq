@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ForEach", "Test_ForEac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_IndexOf", "Test_IndexOf\Test_IndexOf.csproj", "{3E495F17-7799-443E-BEB9-19BDD39DDAA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Find", "Test_Find\Test_Find.csproj", "{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3E495F17-7799-443E-BEB9-19BDD39DDAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E495F17-7799-443E-BEB9-19BDD39DDAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E495F17-7799-443E-BEB9-19BDD39DDAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
