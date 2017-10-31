@@ -32,7 +32,10 @@ namespace KD.Linq
         /// </summary>
         public static IEnumerable<TValue> ForEach<TValue>(this IEnumerable<TValue> source, Action<TValue> action)
         {
+            if (action == null) throw new ArgumentNullException(nameof(action), "Cannot run null Action.");
             return new ForEachIterator<TValue>(source, action);
         }
+
+        public static
     }
 }
