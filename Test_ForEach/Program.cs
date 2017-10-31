@@ -16,7 +16,7 @@ namespace Test_ForEach
             Console.WriteLine();
 
             IEnumerable<int> enumerable = new int[] { 1, 2, 1, 3, 1, 4 };
-            // Generic ForEach made for anu Enumerable
+            // Generic ForEach made for any Enumerable
             enumerable.ForEach(value => Console.Write(value + ", ")).ToList();
 
             Console.ReadKey();
