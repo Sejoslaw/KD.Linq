@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 namespace KD.Linq
 {
-    internal class ReplaceMultipleIterator<TValue> : ReplaceIterator<TValue>
+    /// <summary>
+    /// Iterator used for ReplaceMultiple method.
+    /// </summary>]
+    public class ReplaceMultipleIterator<TValue> : ReplaceIterator<TValue>
     {
         public Func<TValue, bool> Selector { get; }
 

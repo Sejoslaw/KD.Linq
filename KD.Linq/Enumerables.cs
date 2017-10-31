@@ -25,5 +25,14 @@ namespace KD.Linq
         {
             return new ReplaceMultipleIterator<TValue>(source, newValue, selector);
         }
+
+        /// <summary>
+        /// Generic version of "ForEach" method.
+        /// Made separate from <see cref="List{T}"/>.
+        /// </summary>
+        public static IEnumerable<TValue> ForEach<TValue>(this IEnumerable<TValue> source, Action<TValue> action)
+        {
+            return new ForEachIterator<TValue>(source, action);
+        }
     }
 }
