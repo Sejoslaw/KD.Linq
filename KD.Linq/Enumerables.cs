@@ -16,5 +16,7 @@ namespace KD.Linq
             if (index < 0 || index > int.MaxValue) throw new IndexOutOfRangeException($"Wrong index value ({ index })");
             return new ReplaceAtIterator<TValue>(source, index, newValue);
         }
+
+        //public static IEnumerable<TValue> ReplaceMultiple<TValue>
     }
 }
