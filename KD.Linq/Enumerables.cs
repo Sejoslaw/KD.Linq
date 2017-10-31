@@ -17,6 +17,13 @@ namespace KD.Linq
             return new ReplaceAtIterator<TValue>(source, index, newValue);
         }
 
-        //public static IEnumerable<TValue> ReplaceMultiple<TValue>
+        /// <summary>
+        /// Replaces multiple values by given selector.
+        /// If the selector is null
+        /// </summary>
+        public static IEnumerable<TValue> ReplaceMultiple<TValue>(this IEnumerable<TValue> source, TValue newValue, Func<TValue, bool> selector = null)
+        {
+            return new ReplaceMultipleIterator<TValue>(source, newValue, selector);
+        }
     }
 }

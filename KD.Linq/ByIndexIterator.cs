@@ -30,7 +30,8 @@ namespace KD.Linq
 
         public override bool MoveNext()
         {
-            while (this.Enumerator.MoveNext())
+            var moved = this.Enumerator.MoveNext();
+            if (moved)
             {
                 if (this.currentIndex == this.Index)
                 {
@@ -40,10 +41,30 @@ namespace KD.Linq
                 {
                     OnWrongIndexHit();
                 }
-                currentIndex++;
+                this.currentIndex++;
                 return true;
             }
             return false;
+
+            //var localIndex = 0;
+            //while (this.Enumerator.MoveNext())
+            //{
+            //    if (localIndex == this.currentIndex)
+            //    {
+            //        if (this.currentIndex == this.Index)
+            //        {
+            //            OnWantedIndexHit();
+            //        }
+            //        else
+            //        {
+            //            OnWrongIndexHit();
+            //        }
+            //        currentIndex++;
+            //        return true;
+            //    }
+            //    localIndex++;
+            //}
+            //return false;
         }
 
         /// <summary>
