@@ -70,6 +70,7 @@ var el3 = new Element() { Value = 3 };
 var el4 = new Element() { Value = 4 };
 
 IEnumerable<Element> list = new List<Element>() { el1, el2, el3, el4 };
+// Get index of el3 object in current Enumerable
 var index = list.IndexOf(el3);
 
 Console.WriteLine("Index = " + index);
