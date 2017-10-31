@@ -15,7 +15,7 @@ var list2 = list.ReplaceAt(1, 9).ToList();
 Console.WriteLine(string.Join(", ", list2));
 
 // Replace value at index 2 to 567
-var list3 = list2.ReplaceAt(2, 7).ToList();
+var list3 = list2.ReplaceAt(2, 567).ToList();
 Console.WriteLine(string.Join(", ", list3));
 ```
 ![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/ReplaceAt.PNG)
