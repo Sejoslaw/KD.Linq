@@ -35,7 +35,7 @@ Console.WriteLine();
 IEnumerable<int> enumerable2 = enumerable.ForEach(value => { return value + 1; }).ToList();
 enumerable2.ForEach(value => Console.Write(value + ", ")).ToList();
 ```
-![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/ForEach.PNG)
+![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/ForEach2.PNG)
 
 
 Index Of:
