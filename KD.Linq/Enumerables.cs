@@ -28,6 +28,7 @@ namespace KD.Linq
         /// <summary>
         /// Generic version of "ForEach" method.
         /// Made separate from <see cref="List{T}"/>.
+        /// Executes given <see cref="Action"/> on every item in current collection.
         /// </summary>
         public static IEnumerable<TValue> ForEach<TValue>(this IEnumerable<TValue> source, Action<TValue> action)
         {
@@ -38,6 +39,7 @@ namespace KD.Linq
         /// <summary>
         /// Generic version of "ForEach" method.
         /// Made separate from <see cref="List{T}"/>.
+        /// Returns Enumerable collection where given Function (<see cref="Func{T, TResult}"/>) was used on every item in current collection.
         /// </summary>
         public static IEnumerable<TValue> ForEach<TValue>(this IEnumerable<TValue> source, Func<TValue, TValue> function)
         {
