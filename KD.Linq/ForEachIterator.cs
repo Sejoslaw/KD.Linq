@@ -4,16 +4,13 @@ using System.Collections.Generic;
 namespace KD.Linq
 {
     /// <summary>
-    /// Iterator used by ForEach method.
+    /// Iterator used by ForEach methods.
     /// </summary>
-    public class ForEachIterator<TValue> : ByIndexIterator<TValue>
+    public abstract class ForEachIterator<TValue> : ByIndexIterator<TValue>
     {
-        public Action<TValue> Action { get; }
-
-        public ForEachIterator(IEnumerable<TValue> source, Action<TValue> action) :
+        public ForEachIterator(IEnumerable<TValue> source) :
             base(source, -1)
         {
-            this.Action = action;
         }
 
         /// <summary>
@@ -29,10 +26,8 @@ namespace KD.Linq
             this.ForEachIndex();
         }
 
-        public virtual void ForEachIndex()
-        {
-            this.Current = this.Enumerator.Current;
-            this.Action(this.Current);
-        }
+        // Abstract Methods
+
+        public abstract void ForEachIndex();
     }
 }

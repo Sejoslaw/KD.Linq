@@ -32,7 +32,17 @@ namespace KD.Linq
         public static IEnumerable<TValue> ForEach<TValue>(this IEnumerable<TValue> source, Action<TValue> action)
         {
             if (action == null) throw new ArgumentNullException(nameof(action), "Cannot run null Action.");
-            return new ForEachIterator<TValue>(source, action);
+            return new ForEachActionIterator<TValue>(source, action);
+        }
+
+        /// <summary>
+        /// Generic version of "ForEach" method.
+        /// Made separate from <see cref="List{T}"/>.
+        /// </summary>
+        public static IEnumerable<TValue> ForEach<TValue>(this IEnumerable<TValue> source, Func<TValue, TValue> function)
+        {
+            if (function == null) throw new ArgumentNullException(nameof(function), "Cannot run null Function.");
+            return new ForEachFunctionIterator<TValue>(source, function);
         }
 
         /// <summary>

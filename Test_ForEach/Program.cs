@@ -15,9 +15,15 @@ namespace Test_ForEach
 
             Console.WriteLine();
 
+            // Generic ForEach made for any Enumerable - Action Version
             IEnumerable<int> enumerable = new int[] { 1, 2, 1, 3, 1, 4 };
-            // Generic ForEach made for any Enumerable
             enumerable.ForEach(value => Console.Write(value + ", ")).ToList();
+
+            Console.WriteLine();
+
+            // Generic ForEach made for any Enumerable - Function Version
+            IEnumerable<int> enumerable2 = enumerable.ForEach(value => { return value + 1; }).ToList();
+            enumerable2.ForEach(value => Console.Write(value + ", ")).ToList();
 
             Console.ReadKey();
         }
