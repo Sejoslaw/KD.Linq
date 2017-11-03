@@ -12,12 +12,28 @@ namespace KD.Linq
         /// <summary>
         /// Returns all occurrence of specified element in current Enumerable.
         /// </summary>
-        public static IEnumerable<TValue> Find<TValue>(this IEnumerable<TValue> source, TValue lookingFor)
+        public static List<TValue> Find<TValue>(this IEnumerable<TValue> source, TValue lookingFor)
         {
             var list = new List<TValue>();
             foreach (var value in source)
             {
                 if (value.Equals(lookingFor))
+                {
+                    list.Add(value);
+                }
+            }
+            return list;
+        }
+
+        /// <summary>
+        /// Returns all elements which fullfill the selector.
+        /// </summary>
+        public static List<TValue> Find<TValue>(this IEnumerable<TValue> source, Func<TValue, bool> selector)
+        {
+            var list = new List<TValue>();
+            foreach (var value in source)
+            {
+                if (selector(value))
                 {
                     list.Add(value);
                 }
@@ -74,7 +90,6 @@ namespace KD.Linq
 
         /// <summary>
         /// Replaces multiple values by given selector.
-        /// If the selector is null
         /// </summary>
         public static IEnumerable<TValue> ReplaceMultiple<TValue>(this IEnumerable<TValue> source, TValue newValue, Func<TValue, bool> selector = null)
         {
