@@ -6,7 +6,7 @@ namespace KD.Linq
     /// <summary>
     /// ForEach with Action as parameter.
     /// </summary>
-    public class ForEachActionIterator<TValue> : ForEachIterator<TValue>
+    internal class ForEachActionIterator<TValue> : ForEachIterator<TValue>
     {
         public Action<TValue> Action { get; }
 

@@ -6,7 +6,7 @@ namespace KD.Linq
     /// <summary>
     /// Iterator used by ForEach methods.
     /// </summary>
-    public abstract class ForEachIterator<TValue> : ByIndexIterator<TValue>
+    internal abstract class ForEachIterator<TValue> : ByIndexIterator<TValue>
     {
         public ForEachIterator(IEnumerable<TValue> source) :
             base(source, -1)

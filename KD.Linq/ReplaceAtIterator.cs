@@ -5,7 +5,7 @@ namespace KD.Linq
     /// <summary>
     /// Iterator used for ReplaceAt method.
     /// </summary>
-    public class ReplaceAtIterator<TValue> : ReplaceIterator<TValue>
+    internal class ReplaceAtIterator<TValue> : ReplaceIterator<TValue>
     {
         public ReplaceAtIterator(IEnumerable<TValue> source, int index, TValue newValue) :
             base(source, index, newValue)

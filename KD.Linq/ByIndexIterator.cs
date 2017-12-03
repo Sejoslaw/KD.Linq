@@ -5,7 +5,7 @@ namespace KD.Linq
     /// <summary>
     /// Iterator which iterates over each index.
     /// </summary>
-    public abstract class ByIndexIterator<TValue> : Iterator<TValue>
+    internal abstract class ByIndexIterator<TValue> : Iterator<TValue>
     {
         /// <summary>
         /// Index on which the action should be done.

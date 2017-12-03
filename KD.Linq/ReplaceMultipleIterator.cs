@@ -6,7 +6,7 @@ namespace KD.Linq
     /// <summary>
     /// Iterator used for ReplaceMultiple method.
     /// </summary>]
-    public class ReplaceMultipleIterator<TValue> : ReplaceIterator<TValue>
+    internal class ReplaceMultipleIterator<TValue> : ReplaceIterator<TValue>
     {
         public Func<TValue, bool> Selector { get; }
 

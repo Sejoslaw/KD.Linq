@@ -6,7 +6,7 @@ namespace KD.Linq
     /// <summary>
     /// ForEach with Function as parameter.
     /// </summary>
-    public class ForEachFunctionIterator<TValue> : ForEachIterator<TValue>
+    internal class ForEachFunctionIterator<TValue> : ForEachIterator<TValue>
     {
         public Func<TValue, TValue> Function { get; }
 

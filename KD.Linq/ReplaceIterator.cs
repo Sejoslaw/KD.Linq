@@ -5,7 +5,7 @@ namespace KD.Linq
     /// <summary>
     /// Class used when replacement is needed.
     /// </summary>
-    public abstract class ReplaceIterator<TValue> : ByIndexIterator<TValue>
+    internal abstract class ReplaceIterator<TValue> : ByIndexIterator<TValue>
     {
         /// <summary>
         /// New value for which the selected one will be replaced.
