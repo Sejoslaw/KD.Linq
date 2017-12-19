@@ -54,6 +54,17 @@ Console.WriteLine("Index = " + index);
 ![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/IndexOf.PNG)
 
 
+IsEmpty:
+```csharp
+IEnumerable<int> list1 = new List<int> { 1, 2, 3 };
+Console.WriteLine($"List1 is empty: { list1.IsEmpty() }");
+
+IEnumerable<int> list2 = new List<int> { };
+Console.WriteLine($"List2 is empty: { list2.IsEmpty() }");
+```
+![](https://raw.githubusercontent.com/Sejoslaw/KD.Linq/master/img/IsEmpty.PNG)
+
+
 Replace At:
 ```csharp
 List<int> list = new List<int>() { 1, 2, 1, 3, 1, 4 };

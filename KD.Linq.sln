@@ -1,19 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KD.Linq", "KD.Linq\KD.Linq.csproj", "{3B4D83B5-AABA-483D-BAAC-C2C4D5D0AD9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ReplaceAt", "Test_ReplaceAt\Test_ReplaceAt.csproj", "{EFA95432-08D7-40D6-9AD3-C12A4BB03C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_ReplaceAt", "Test_ReplaceAt\Test_ReplaceAt.csproj", "{EFA95432-08D7-40D6-9AD3-C12A4BB03C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ReplaceMultiple", "Test_ReplaceMultiple\Test_ReplaceMultiple.csproj", "{B271100D-B46E-47AE-A7E0-6054E8C73D32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_ReplaceMultiple", "Test_ReplaceMultiple\Test_ReplaceMultiple.csproj", "{B271100D-B46E-47AE-A7E0-6054E8C73D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ForEach", "Test_ForEach\Test_ForEach.csproj", "{587B1158-28DF-423E-A3A6-076970DAF024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_ForEach", "Test_ForEach\Test_ForEach.csproj", "{587B1158-28DF-423E-A3A6-076970DAF024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_IndexOf", "Test_IndexOf\Test_IndexOf.csproj", "{3E495F17-7799-443E-BEB9-19BDD39DDAA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_IndexOf", "Test_IndexOf\Test_IndexOf.csproj", "{3E495F17-7799-443E-BEB9-19BDD39DDAA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Find", "Test_Find\Test_Find.csproj", "{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Find", "Test_Find\Test_Find.csproj", "{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_IsEmpty", "Test_IsEmpty\Test_IsEmpty.csproj", "{A815E8EF-BA9D-4FB9-A56D-CA9ACC550F3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_AsReadOnly", "Test_AsReadOnly\Test_AsReadOnly.csproj", "{E7C2FA85-62C5-4930-A070-17CFBB95EF20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0404DB6-6E38-49A2-A0AA-076274B5DFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A815E8EF-BA9D-4FB9-A56D-CA9ACC550F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A815E8EF-BA9D-4FB9-A56D-CA9ACC550F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A815E8EF-BA9D-4FB9-A56D-CA9ACC550F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A815E8EF-BA9D-4FB9-A56D-CA9ACC550F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C2FA85-62C5-4930-A070-17CFBB95EF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C2FA85-62C5-4930-A070-17CFBB95EF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C2FA85-62C5-4930-A070-17CFBB95EF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C2FA85-62C5-4930-A070-17CFBB95EF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace KD.Linq
@@ -9,6 +10,16 @@ namespace KD.Linq
     /// </summary>
     public static class Enumerables
     {
+        /// <summary>
+        /// Converts current <see cref="IEnumerable{T}"/> to <see cref="ReadOnlyCollection{T}"/>.
+        /// </summary>
+        public static ReadOnlyCollection<TValue> AsReadOnly<TValue>(this IEnumerable<TValue> source)
+        {
+            List<TValue> sourceList = source.ToList();
+            ReadOnlyCollection<TValue> readOnlyCollection = new ReadOnlyCollection<TValue>(sourceList);
+            return readOnlyCollection;
+        }
+
         /// <summary>
         /// Returns all occurrence of specified element in current Enumerable.
         /// </summary>
@@ -77,6 +88,14 @@ namespace KD.Linq
                 }
             }
             return -1;
+        }
+
+        /// <summary>
+        /// Returns true if current enumerable contains no elements.
+        /// </summary>
+        public static bool IsEmpty<TValue>(this IEnumerable<TValue> source)
+        {
+            return source.Count() <= 0;
         }
 
         /// <summary>
