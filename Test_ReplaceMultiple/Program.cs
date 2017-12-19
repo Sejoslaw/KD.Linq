@@ -9,15 +9,15 @@ namespace Test_ReplaceMultiple
     {
         static void Main(string[] args)
         {
-            var list = new List<int>() { 1, 2, 1, 3, 1, 4 };
+            List<int> list = new List<int>() { 1, 2, 1, 3, 1, 4 };
             Console.WriteLine(string.Join(", ", list));
 
             // Replace value at each index where value equals 1 to new value which is 9
-            var list2 = list.ReplaceMultiple(9, value => value == 1).ToList();
+            List<int> list2 = list.ReplaceMultiple(9, value => value == 1).ToList();
             Console.WriteLine(string.Join(", ", list2));
 
             // Replace value at each index where value equals 2 to new value which is 8
-            var list3 = list2.ReplaceMultiple(8, value => value == 2).ToList();
+            List<int> list3 = list2.ReplaceMultiple(8, value => value == 2).ToList();
             Console.WriteLine(string.Join(", ", list3));
 
             Console.ReadKey();
